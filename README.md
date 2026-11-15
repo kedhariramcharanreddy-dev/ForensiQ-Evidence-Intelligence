@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # ForensiQ — AI-Assisted Digital Forensics Management System
 
 ForensiQ is a Flask and MySQL web application for organizing digital-forensics cases and evidence. It provides investigator accounts, evidence registration, SHA-256 file-integrity checks, transparent rule-based AI-assisted triage, chain-of-custody records, audit logs and CSV reporting.
@@ -96,6 +95,3 @@ For a real deployment, remove/disable demo credentials, use a strong secret key,
 - SHA-256 is a cryptographic hash used to detect whether a file differs from its recorded fingerprint. It does not prove who created the file or that the file is genuine.
 - The AI-assisted triage is a keyword-based decision-support demonstration. It can produce false positives and false negatives; an investigator must validate findings.
 - This project is an educational prototype, not a certified forensic platform.
-=======
-# ForensiQ-Evidence-Intelligence
->>>>>>> c0bcf70a822051e5442782c76fcf93d54075a514
