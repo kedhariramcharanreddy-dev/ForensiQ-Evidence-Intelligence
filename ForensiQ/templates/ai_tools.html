@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% block heading %}AI Development Lab{% endblock %}
+{% block content %}
+<div class="ai-lab-intro">
+  <div>
+    <span class="eyebrow">AI-ASSISTED SOFTWARE DEVELOPMENT</span>
+    <h2>Tools behind ForensiQ</h2>
+    <p class="muted">A transparent record of how AI assistants can support planning, coding, explanation and review. The tools below are development assistants, not integrations running inside this website.</p>
+  </div>
+  <div class="ai-lab-mark">✦</div>
+</div>
+
+<div class="ai-tool-grid">
+  <article class="ai-tool-card">
+    <div class="ai-tool-top"><span class="ai-tool-icon chatgpt">✳</span><span class="tool-tag">Planning & problem solving</span></div>
+    <h3>ChatGPT</h3>
+    <p>Used as a conversational assistant to break the project into modules, reason through Flask workflows, draft code examples and explain implementation choices.</p>
+    <div class="tool-output"><b>Typical contribution</b><span>Project structure · Flask logic · debugging explanations · viva preparation</span></div>
+    <details><summary>Example prompt</summary><p>“Review this Flask digital-forensics project structure. Explain the user workflow, identify the files involved in login and evidence registration, and suggest a safe implementation plan before changing code.”</p></details>
+  </article>
+  <article class="ai-tool-card">
+    <div class="ai-tool-top"><span class="ai-tool-icon copilot">⌘</span><span class="tool-tag">Inline coding</span></div>
+    <h3>GitHub Copilot</h3>
+    <p>Used in VS Code for inline code completion, function suggestions and help while editing Python, HTML, CSS and JavaScript.</p>
+    <div class="tool-output"><b>Typical contribution</b><span>Code completion · route scaffolding · template snippets · refactoring ideas</span></div>
+    <details><summary>Example prompt</summary><p>“Add a Flask registration route using the existing MySQL helper functions. Validate the form, hash the password with Werkzeug, handle duplicate emails and follow the project's existing flash-message style.”</p></details>
+  </article>
+  <article class="ai-tool-card">
+    <div class="ai-tool-top"><span class="ai-tool-icon gemini">✧</span><span class="tool-tag">Alternative reasoning</span></div>
+    <h3>Google Gemini</h3>
+    <p>Can be used as a second opinion to review the application flow, suggest interface improvements and simplify technical explanations.</p>
+    <div class="tool-output"><b>Typical contribution</b><span>Workflow review · UI ideas · documentation drafts · concept explanations</span></div>
+    <details><summary>Example prompt</summary><p>“Explain the end-to-end workflow of this evidence management application in beginner-friendly language. Separate authentication, evidence storage, SHA-256 verification, risk triage and chain of custody.”</p></details>
+  </article>
+  <article class="ai-tool-card">
+    <div class="ai-tool-top"><span class="ai-tool-icon claude">✺</span><span class="tool-tag">Code review & clarity</span></div>
+    <h3>Claude</h3>
+    <p>Can be used for an independent code review, identifying edge cases and explaining long Python functions in a structured way.</p>
+    <div class="tool-output"><b>Typical contribution</b><span>Code review · error analysis · readability · test-case suggestions</span></div>
+    <details><summary>Example prompt</summary><p>“Review this evidence upload and SHA-256 verification code. Look for missing-file handling, unsafe assumptions and misleading integrity claims. List issues by severity and suggest focused fixes.”</p></details>
+  </article>
+</div>
+
+<div class="panel ai-workflow-panel">
+  <div class="panel-head"><div><h3>AI-assisted development workflow</h3><p class="muted">A practical human-in-the-loop process</p></div><span class="workflow-pill">Human reviewed</span></div>
+  <div class="ai-flow">
+    <div><span>01</span><b>Plan</b><small>ChatGPT helps break down requirements.</small></div>
+    <i>→</i>
+    <div><span>02</span><b>Code</b><small>Copilot suggests code in VS Code.</small></div>
+    <i>→</i>
+    <div><span>03</span><b>Review</b><small>Gemini / Claude can provide a second review.</small></div>
+    <i>→</i>
+    <div><span>04</span><b>Test</b><small>Developer runs the app and verifies behavior.</small></div>
+  </div>
+  <p class="workflow-note">AI suggestions are not accepted blindly. The developer checks the code, tests the feature and remains responsible for the final implementation.</p>
+</div>
+
+<div class="panel">
+  <div class="panel-head"><div><h3>Where AI fits in this project</h3><p class="muted">Development assistants versus application functionality</p></div></div>
+  <div class="ai-distinction">
+    <div><span class="dist-label">DEVELOPMENT ASSISTANTS</span><b>ChatGPT · Copilot · Gemini · Claude</b><p>Help developers plan, write, explain and review source code during development.</p></div>
+    <div><span class="dist-label">FORENSIQ APPLICATION LOGIC</span><b>SHA-256 + rule-based triage</b><p>SHA-256 checks file consistency against a stored digest. The current risk triage scans metadata for configured keywords; it is not a trained ML model or a live API call to the assistants above.</p></div>
+  </div>
+</div>
+{% endblock %}
