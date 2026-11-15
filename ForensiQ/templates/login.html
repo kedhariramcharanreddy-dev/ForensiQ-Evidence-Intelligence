@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="login-shell">
+  <div class="login-art">
+    <div class="art-grid"></div>
+    <div class="hero-copy">
+      <span class="pill">AI-ASSISTED DIGITAL FORENSICS</span>
+      <h1>Evidence you can<br><em>trust.</em></h1>
+      <p>Collect, preserve, verify and review digital evidence in one organized investigation workspace.</p>
+      <div class="mini-stats">
+        <div><b>SHA-256</b><span>Integrity checks</span></div>
+        <div><b>Traceable</b><span>Custody history</span></div>
+        <div><b>AI-assisted</b><span>Evidence triage</span></div>
+      </div>
+      <div class="auth-note">Built for structured investigations · Secure account access</div>
+    </div>
+  </div>
+  <div class="login-card">
+    <div class="brand login-brand"><span class="brandmark">F</span><div><b>ForensiQ</b><small>Evidence Intelligence</small></div></div>
+    <span class="eyebrow">INVESTIGATOR PORTAL</span>
+    <h2>Welcome back</h2>
+    <p class="muted">Sign in to continue to your workspace.</p>
+    <form method="post" action="{{url_for('login')}}">
+      <label>Email address<input name="email" type="email" placeholder="you@example.com" autocomplete="username" required></label>
+      <label>Password<input name="password" type="password" placeholder="Enter your password" autocomplete="current-password" required></label>
+      <button class="btn primary wide" type="submit">Sign in to workspace <span>→</span></button>
+    </form>
+    <p class="auth-switch">New to ForensiQ? <a href="{{url_for('register')}}">Create an account</a></p>
+    <div class="auth-foot">Your investigation workspace is protected by account authentication.</div>
+  </div>
+</div>
+{% endblock %}
